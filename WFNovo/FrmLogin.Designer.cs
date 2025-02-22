@@ -1,6 +1,6 @@
 ﻿namespace WFNovo
 {
-    partial class Form1
+    partial class FrmLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,8 +31,8 @@
             lblNome = new Label();
             btnCliqueAqui = new Button();
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
             SuspendLayout();
             // 
             // lblNome
@@ -44,7 +44,6 @@
             lblNome.Size = new Size(99, 20);
             lblNome.TabIndex = 0;
             lblNome.Text = "Username:";
-            lblNome.Click += lblNome_Click;
             // 
             // btnCliqueAqui
             // 
@@ -54,8 +53,7 @@
             btnCliqueAqui.TabIndex = 1;
             btnCliqueAqui.Text = "Login";
             btnCliqueAqui.UseVisualStyleBackColor = true;
-            btnCliqueAqui.Click += button1_Click;
-            btnCliqueAqui.MouseClick += btnCliqueAqui_MouseClick;
+            btnCliqueAqui.Click += btnLogar_Click;
             // 
             // label1
             // 
@@ -66,37 +64,35 @@
             label1.Size = new Size(105, 20);
             label1.TabIndex = 2;
             label1.Text = "Password:";
-            label1.Click += label1_Click_1;
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.Location = new Point(160, 43);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(139, 23);
-            textBox1.TabIndex = 3;
+            txtUsername.Location = new Point(160, 43);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(139, 23);
+            txtUsername.TabIndex = 3;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Location = new Point(160, 88);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(139, 23);
-            textBox2.TabIndex = 4;
-            textBox2.TextChanged += textBox2_TextChanged;
+            txtPassword.Location = new Point(160, 88);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(139, 23);
+            txtPassword.TabIndex = 4;
             // 
-            // Form1
+            // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(348, 194);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
             Controls.Add(label1);
             Controls.Add(btnCliqueAqui);
             Controls.Add(lblNome);
-            Name = "Form1";
+            Name = "FrmLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -106,7 +102,7 @@
         private Label lblNome;
         private Button btnCliqueAqui;
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtUsername;
+        private TextBox txtPassword;
     }
 }
